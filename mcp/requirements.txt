@@ -1,0 +1,8 @@
+mcp[cli]<2
+fastmcp
+bilibili-api-python
+uvicorn
+fastapi
+python-dotenv
+openai
+requests
