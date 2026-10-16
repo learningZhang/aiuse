@@ -1,0 +1,14 @@
+# 二进制
+/mylog
+/bin/
+
+# 日志
+/logs/
+
+# 本地配置（含密钥的副本）
+/conf/config/config.local.yaml
+
+# 编辑器 / 系统
+.idea/
+.vscode/
+.DS_Store

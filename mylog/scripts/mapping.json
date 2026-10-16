@@ -1,0 +1,66 @@
+{
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas": 0,
+    "analysis": {
+      "analyzer": {
+        "ik_search_analyzer": {
+          "type": "custom",
+          "tokenizer": "ik_smart"
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "summary": {
+        "type": "text",
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "content": {
+        "type": "text",
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart"
+      },
+      "tags": {
+        "type": "keyword"
+      },
+      "date": {
+        "type": "date",
+        "format": "strict_date_optional_time||epoch_millis"
+      },
+      "mood": {
+        "type": "keyword"
+      },
+      "mood_score": {
+        "type": "integer"
+      },
+      "location_name": {
+        "type": "keyword"
+      },
+      "location": {
+        "type": "geo_point"
+      },
+      "weather": {
+        "type": "keyword"
+      },
+      "word_count": {
+        "type": "integer"
+      },
+      "is_private": {
+        "type": "boolean"
+      },
+      "created_at": {
+        "type": "date",
+        "format": "strict_date_optional_time||epoch_millis"
+      }
+    }
+  }
+}
